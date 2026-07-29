@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Special Person ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    min-height:100vh;
+    background:linear-gradient(135deg,#ff758c,#ff7eb3,#ffd3a5);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    overflow-x:hidden;
+}
+
+.container{
+    width:100%;
+    max-width:900px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(10px);
+    border-radius:25px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 15px 30px rgba(0,0,0,.3);
+}
+
+h1{
+    color:#fff;
+    margin-bottom:25px;
+    font-size:2rem;
+}
+
+.photos{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:25px;
+}
+
+.photo{
+    animation:float 3s ease-in-out infinite;
+}
+
+.photo:nth-child(2){
+    animation-delay:1.5s;
+}
+
+.photo img{
+    width:250px;
+    max-width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    border-radius:20px;
+    border:5px solid #fff;
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+    transition:.4s;
+}
+
+.photo img:hover{
+    transform:scale(1.05);
+}
+
+.message{
+    margin-top:30px;
+    color:#fff;
+    font-size:20px;
+    line-height:1.8;
+}
+
+.message span{
+    color:yellow;
+    font-weight:bold;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-15px);
+    }
+}
+
+.heart{
+    position:fixed;
+    color:white;
+    font-size:20px;
+    animation:up linear infinite;
+}
+
+@keyframes up{
+    from{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+    to{
+        transform:translateY(-120px);
+        opacity:1;
+    }
+}
+
+/* ===== Mobile ===== */
+
+@media (max-width:768px){
+
+.container{
+    padding:20px 15px;
+}
+
+h1{
+    font-size:28px;
+}
+
+.photos{
+    flex-direction:column;
+}
+
+.photo img{
+    width:180px;
+}
+
+.message{
+    font-size:17px;
+}
+}
+
+/* ===== Small Mobile ===== */
+
+@media (max-width:400px){
+
+h1{
+    font-size:23px;
+}
+
+.photo img{
+    width:150px;
+}
+
+.message{
+    font-size:15px;
+}
+
+.container{
+    padding:15px 10px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>❤️ fav Sadia apu❤️</h1>
+
+<div class="photos">
+
+<div class="photo">
+<img src="photo1.jpg" alt="Photo 1">
+</div>
+
+<div class="photo">
+<img src="photo2.jpg" alt="Photo 2">
+</div>
+
+</div>
+
+<div class="message">
+<p>
+Dear <span>My Special Person</span> ❤️<br><br>
+
+Tomake prothom dekhar por thekei mone hoyechilo,
+tumi amar jiboner shobcheye shundor onubhuti. 💖<br><br>
+tomer kotha onek mone porle tomer photo dekhi<br>
+Tomar hasi amar mon bhalo kore dey. 😊<br>
+
+Joto din jabe,
+ami toto beshi tomake respect ar care korbo. 🌹<br>
+
+Promise...
+Tomar pashe thakbo shob shomoy. ❤️<br>
+
+I Really Love You Forever... 🥺💞
+</div>
+
+</div>
+
+<script>
+
+for(let i=0;i<40;i++){
+
+let h=document.createElement("div");
+
+h.className="heart";
+
+h.innerHTML="❤";
+
+h.style.left=Math.random()*100+"vw";
+
+h.style.animationDuration=(5+Math.random()*5)+"s";
+
+h.style.animationDelay=Math.random()*5+"s";
+
+h.style.fontSize=(15+Math.random()*20)+"px";
+
+document.body.appendChild(h);
+
+}
+
+</script>
+
+</body>
+</html>
